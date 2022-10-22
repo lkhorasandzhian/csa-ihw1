@@ -2,7 +2,7 @@
 
 ## Выполненные критерии на 4 балла
 
-### Код на C (файл 23variant.c):
+### Код на C (файл [23variant.c](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_4/23variant.c)):
 
 ```c
 #include <stdio.h>
@@ -50,19 +50,19 @@ int main(int argc, char *argv[]) {
 Итого получаем kGHalf = 10 / 2 = 5. В дальнейшем готовую константу остаётся дважды умножить на i-ую позицию массива A.
 Также нельзя забывать о случае, когда пользователь пытается ввести отрицательное время - тогда мы преждевременно завершаем программу с соответствующим сообщением в консоль.
 
-### Стандартная компиляция программы (получим файл 23variant.s):
+### Стандартная компиляция программы (получим файл [23variant.s](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_4/assembly_usual/23variant.s)):
 
 ```sh
 gcc -O0 -Wall -masm=intel -S 23variant.c -o 23variant.s
 ```
 
-### Компиляция программы с оптимизацией (получим файл 23variant_optimized.s):
+### Компиляция программы с оптимизацией (получим файл [23variant_optimized.s](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_4/assembly_optimized/23variant_optimized.s)):
 
 ```sh
 gcc -O0 -Wall -masm=intel -S -fno-asynchronous-unwind-tables -fcf-protection=none 23variant.c -o 23variant_optimized.s
 ```
 
-### Тестовое покрытие (демонстрация эквивалентности функционирования программ 23variant.s и 23variant_optimized.s):
+### Тестовое покрытие (демонстрация эквивалентности функционирования программ [23variant.s](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_4/assembly_usual/23variant.s) и [23variant_optimized.s](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_4/assembly_optimized/23variant_optimized.s)):
 | Input data       | usual               | optimized           |
 |------------------|---------------------|---------------------|
 | *empty_array*    | *empty_array*       | *empty_array*       |
@@ -71,7 +71,7 @@ gcc -O0 -Wall -masm=intel -S -fno-asynchronous-unwind-tables -fcf-protection=non
 
 ## Выполненные критерии на 5 баллов
 
-### Комментарии к 23variant_func.s - фрагмент 1:
+### Комментарии к [23variant_func_optimized.s](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_5/23variant_func_optimized.s) - фрагмент 1:
 
 ```assembly
 generateArray:
@@ -82,7 +82,7 @@ generateArray:
 	mov	DWORD PTR -28[rbp], esi		# int size = esi. (Приём входных данных)
 ```
 
-### Комментарии к 23variant_func.s - фрагмент 2:
+### Комментарии к [23variant_func_optimized.s](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_5/23variant_func_optimized.s) - фрагмент 2:
 
 ```assembly
 	add	DWORD PTR -16[rbp], 1
@@ -95,7 +95,7 @@ generateArray:
 	ret
 ```
 
-### Комментарии к 23variant_func.s - фрагмент 3:
+### Комментарии к [23variant_func_optimized.s](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_5/23variant_func_optimized.s) - фрагмент 3:
 
 ```assembly
 	mov	eax, DWORD PTR -36[rbp]		# eax = int argc.
@@ -109,7 +109,7 @@ generateArray:
 
 ## Выполненные критерии на 6 баллов
 
-### Код на C с регистрами (файл 23variant_reg.c):
+### Код на C с регистрами (файл [23variant_reg.c](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_6/23variant_reg.c)):
 
 ```c
 #include <stdio.h>
@@ -162,7 +162,7 @@ int main(int argc, char *argv[]) {
 Пару комментариев в коде есть, но решил не приписывать в очевидных местах, как я написал выше.
 
 
-### Тестовое покрытие (демонстрация эквивалентности функционирования программ 23variant.s и 23variant_reg.s):
+### Тестовое покрытие (демонстрация эквивалентности функционирования программ [23variant.s](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_4/23variant.s) и [23variant_reg_optimized.s](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_6/23variant_reg_optimized.s)):
 | Input data       | usual               | with registers           |
 |------------------|---------------------|--------------------------|
 | *empty_array*    | *empty_array*       | *empty_array*            |
