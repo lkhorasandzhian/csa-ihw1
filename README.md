@@ -162,7 +162,7 @@ int main(int argc, char *argv[]) {
 Пару комментариев в коде есть, но решил не приписывать в очевидных местах, как я написал выше.
 
 
-### Тестовое покрытие (демонстрация эквивалентности функционирования программ [23variant.s](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_4/23variant.s) и [23variant_reg_optimized.s](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_6/23variant_reg_optimized.s)):
+### Тестовое покрытие (демонстрация эквивалентности функционирования программ [23variant.s](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_4/assembly_usual/23variant.s) и [23variant_reg_optimized.s](https://github.com/lkhorasandzhian/csa-ihw1/blob/main/grade_6/23variant_reg_optimized.s)):
 | Input data       | usual               | with registers           |
 |------------------|---------------------|--------------------------|
 | *empty_array*    | *empty_array*       | *empty_array*            |
