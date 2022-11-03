@@ -167,4 +167,7 @@ int main(int argc, char *argv[]) {
 |------------------|---------------------|--------------------------|
 | *empty_array*    | *empty_array*       | *empty_array*            |
 | 1 2 3 4 5        | 5 20 45 80 125      | 5 20 45 80 125           |
-| 1 -2 3           | *Exception message* | *Exception message*      |
+| 1 -2 3           | *Exception message* | *Exception message*      |  
+  
+---
+Полученная оценка за работу: 6
